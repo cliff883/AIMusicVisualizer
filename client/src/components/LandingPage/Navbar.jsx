@@ -1,8 +1,4 @@
-import { React, useState } from "react";
-// import { close, gtlogo, menu } from "../../assets";
-import close from "../../assets/close.svg";
-import gtlogo from "../../assets/gtlogo.svg";
-import menu from "../../assets/menu.svg";
+import React from "react";
 
 const Navbar = () => {
 	return (
