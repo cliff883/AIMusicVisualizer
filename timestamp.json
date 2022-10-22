@@ -1,0 +1,27 @@
+{
+    "Fly me to the moon": {"start": 0, "end": 3},
+    "let me play among the stars": {"start": 3, "end": 8},
+    "Let me see what springs like on a Jupiter and Mars": {"start": 8, "end": 16},
+    "In other words": {"start": 16, "end": 18},
+    "hold my hand": {"start": 18, "end": 23},
+    "In other words": {"start": 23, "end": 27},
+    "baby kiss me": {"start": 27, "end": 32},
+    "Fill my heart with song and let me sing forevermore": {"start": 32, "end": 41},
+    "You are all I long for": {"start": 41, "end": 43},
+    "all I worship and adore": {"start": 43, "end": 49},
+    "In other words": {"start": 49, "end": 51},
+    "please be true": {"start": 51, "end": 57},
+    "In other words": {"start": 57, "end": 59},
+    "I love you": {"start": 59, "end": 98},
+
+    "Fill my heart with song and let me sing forevermore": {"start": 98, "end": 106},
+    "You are all I long for": {"start": 106, "end": 109},
+    "all I worship and adore": {"start": 109, "end": 114},
+    "In other words": {"start": 114, "end": 117},
+    "please be true": {"start": 117, "end": 122},
+    "In other words": {"start": 122, "end": 132},
+    "I love you": {"start": 132, "end": 140}
+
+
+
+}
