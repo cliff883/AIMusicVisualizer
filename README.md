@@ -3,16 +3,16 @@ To use whisper:
 
 Run:
 pip install git+https://github.com/openai/whisper.git 
-# on Ubuntu or Debian
+# Ubuntu or Debian
 sudo apt update && sudo apt install ffmpeg
 
-# on Arch Linux
+# Arch Linux
 sudo pacman -S ffmpeg
 
-# on MacOS using Homebrew (https://brew.sh/)
+# MacOS using Homebrew (https://brew.sh/)
 brew install ffmpeg
 
-# This option requires you to run powershell on administrator mode (can right click on the application to enter admin mode)
+This option requires you to run powershell on administrator mode (can right click on the application to enter admin mode)
 # on Windows using Chocolatey (https://chocolatey.org/)
 choco install ffmpeg
 
