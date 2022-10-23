@@ -19,7 +19,7 @@ def main():
     print(list)
     model = whisper.load_model("base")
     audio = model.transcribe("../server/files/in_file.mp3")
-    phrases = re.split(r"[,.]", audio["text"])
+    phrases = audio["text"].split('.')
     print(audio)
     f = open("subtitles.srt", "a")
     f.truncate(0)
