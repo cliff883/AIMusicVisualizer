@@ -1,4 +1,4 @@
-from dalle2 import Dalle2
+
 from PIL import Image
 
 def textToImage(phrases):
