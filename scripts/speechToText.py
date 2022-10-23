@@ -56,8 +56,6 @@ def main():
         f.write("\n\n")
     f.close()
     
-    subprocess.run(["ffmpeg", "-loop", "1", "-r", "1", "-i", "sampleimage.png", "-i", "../server/files/in_file.mp3", "-c:a", "copy","-shortest",
-                   "-c:v", "libx264", "output.mp4"])
-    subprocess.run(["ffmpeg", "-i", "output.mp4", "-vf", "subtitles=subtitles.srt", "output1.mp4"])
-    combine_audio("output1.mp4", "../server/files/in_file.mp3", "../server/files/out_file.mp4")
+    subprocess.run(["ffmpeg", "-i", "../DeforumStableDiffusionLocal/output/output.mp4", "-vf", "subtitles=subtitles.srt", "temp-output.mp4"])
+    combine_audio("temp-output.mp4", "../server/files/in_file.mp3", "../server/files/out_file.mp4")
 main()
