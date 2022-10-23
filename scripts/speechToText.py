@@ -6,7 +6,6 @@ from moviepy.editor import *
 import moviepy.editor as mpe
 import numpy as np
 from time_it import *
-from textToImage import textToImage
 
 def combine_audio(vidname, audname, outname, fps=60): 
     import moviepy.editor as mpe
