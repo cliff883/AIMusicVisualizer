@@ -6,7 +6,7 @@ def time_it():
     model = whisper.load_model('base')
     modify_model(model)
     # modified model should run just like the regular model but with additional hyperparameters and extra data in results
-    results = model.transcribe('Fly_Me_to_the_Moon.mp3')
+    results = model.transcribe('../server/files/in_file.mp3')
     stab_segments = results['segments']
     first_segment_word_timestamps = stab_segments[0]['whole_word_timestamps']
 
