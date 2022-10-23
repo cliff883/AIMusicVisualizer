@@ -2,7 +2,7 @@ import whisper
 from stable_whisper import modify_model
 
 def time_it():
-    model = whisper.load_model('base')
+    model = whisper.load_model("medium")
     modify_model(model)
     # modified model should run just like the regular model but with additional hyperparameters and extra data in results
     results = model.transcribe('../server/files/in_file.mp3')

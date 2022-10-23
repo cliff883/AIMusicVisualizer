@@ -49,7 +49,7 @@ const Create = () => {
 	const renderSwitch = (s) => {
 		switch (s) {
 			case "loading":
-				return <Loading />;
+				return <Loading setState={setState} />;
 			// return <Download handleDownload={handleDownload} />;
 			case "done":
 				return <Download handleDownload={handleDownload} />;

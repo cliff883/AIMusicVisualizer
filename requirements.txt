@@ -1,0 +1,5 @@
+pip install git+https://github.com/openai/whisper.gitp
+pip install moviepy
+pip install setuptools-rust
+pip install uvicorn
+sudo apt-get update && sudo apt-get install ffmpeg
