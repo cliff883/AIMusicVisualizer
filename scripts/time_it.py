@@ -17,5 +17,5 @@ def time_it():
     time_list = []
 
     for i in range(len(stab_segments)):
-        time_list.append([stab_segments[i]['start'], stab_segments[i]['end']])
+        time_list.append([stab_segments[i]['start'], stab_segments[i]['end'], stab_segments[i]['text']])
     return time_list
