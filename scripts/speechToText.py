@@ -1,14 +1,14 @@
+from torch import seed
 import whisper
-import json
-import re
 import subprocess
 from moviepy.editor import *
 import moviepy.editor as mpe
-import numpy as np
 from time_it import *
+import json
+import random
+import math
 
 def combine_audio(vidname, audname, outname, fps=60): 
-    import moviepy.editor as mpe
     my_clip = mpe.VideoFileClip(vidname)
     audio_background = mpe.AudioFileClip(audname)
     final_clip = my_clip.set_audio(audio_background)
@@ -23,6 +23,22 @@ def main():
     print(audio)
     f = open("subtitles.srt", "a")
     f.truncate(0)
+    
+    n_animation_prompts = {}
+    for i in range(len(list)):
+        n_animation_prompts[str(math.floor(list[i][0] * 15))] = list[i][2]
+    n_max_frames = list[len(list)-1][1] * 15
+    n_seed = random.randint(1000000000,9999999999)
+    
+    with open("settingsTemplate.json") as j:
+        settingsData = json.load(j)
+        settingsData["animation_prompts"] = n_animation_prompts
+        settingsData["max_frames"] = n_max_frames
+        settingsData["seed"] = n_seed
+        with open("../DeforumStableDiffusionLocal/runSettings.txt", "a") as jw:
+            jw.write(json.dumps(settingsData))
+            
+    subprocess.run(["cd","..","&&","cd","DeforumStableDiffusionLocal","&&","conda","activate","dsd","&&","python","run.py","--enable_animation_mode","--settings","./runSettings.txt"])
 
     f.write(str(1))
     f.write("\n")
@@ -43,5 +59,5 @@ def main():
     subprocess.run(["ffmpeg", "-loop", "1", "-r", "1", "-i", "sampleimage.png", "-i", "../server/files/in_file.mp3", "-c:a", "copy","-shortest",
                    "-c:v", "libx264", "output.mp4"])
     subprocess.run(["ffmpeg", "-i", "output.mp4", "-vf", "subtitles=subtitles.srt", "output1.mp4"])
-    combine_audio("output1.mp4", "../server/files/in_file.mp3", "final_output.mp4")
+    combine_audio("output1.mp4", "../server/files/in_file.mp3", "../server/files/out_file.mp4")
 main()
